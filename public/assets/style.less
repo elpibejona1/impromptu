@@ -1,0 +1,142 @@
+@import '_reset.less';
+@import '_grid.less';
+@import '_mixins.less';
+@import 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+// Color Declarations
+
+@black: #000;
+@white: #fff;
+
+@crimson: #cf6766;
+@indigo: #30415d;
+@ultramarine: #031424;
+@lightBlue: #8eaebd;
+
+// General Styles
+
+body { background-color: @indigo; }
+
+.appHeading { margin: 5px 0 15px; }
+
+.appHeading__title {
+	text-align: center;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	font-size: 45px;
+	color: @white;
+	text-transform: uppercase;
+}
+
+.appHeading__tagline {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	color: @white;
+	font-size: 18px;
+}
+
+
+.search__bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	left: 0;
+	top: 100px;
+
+	&--1 { background-image: url('images/bg1.jpeg'); }
+	&--2 { background-image: url('images/bg2.jpeg'); }
+	&--3 {
+		background-image: url('images/bg3.jpeg'); 
+		background-position: 65% center;}
+	&--4 {
+		background-image: url('images/bg4.jpeg');
+	}
+
+	&.hidden { display: none; }
+
+}
+
+.search__overlay {
+	min-height: calc(~'100vh - 100px');
+
+	&--1 { background-color: rgba(48,65,93,0.4); }
+	&--2 { background-color: rgba(207,103,102,0.4); }
+	&--3 { background-color: rgba(3,20,36,0.4); }
+	&--4 { background-color: rgba(48,65,93,0.4); }
+}
+
+.search { padding: 50px 10px 0; width: 100%; }
+
+.search__label {
+	display: inline-block;
+	font-family: 'Roboto Slab', serif;
+	font-size: 18px;
+	color: @white;
+	padding: 15px;
+
+	&--location { background-color: @lightBlue; }
+}
+
+.search__input {
+	display: inline-block;
+	margin-top: -5px;
+	margin-left: 80px;
+	font-family: 'Roboto', sans-serif;
+	color: @ultramarine;
+	font-size: 18px;
+	padding: 15px;
+	font-style: italic;
+
+}
+
+ .search__select {
+	display: inline-block;
+	margin-top: -5px;
+	margin-left: 80px;
+	font-family: 'Roboto', sans-serif;
+	color: @ultramarine;
+	font-size: 18px;
+	padding: 15px;
+	font-style: italic;
+	background-color: @white;
+}
+
+.search__button {
+	display: inline-block;	
+	padding: 15px;
+	margin-top: 15px;
+	margin-left: 25px;
+	font-family: 'Roboto Slab', serif;
+	font-size: 22px;
+	font-style: italic;
+	color: @white;
+	cursor: pointer;
+	border: none;
+
+	&--1 { background-color: @crimson; }
+	&--2 { background-color: @indigo; }
+	&--3 { background-color: @crimson; }
+
+}
+
+.search__price {
+	margin-top: 20px;
+	display: inline-block;
+	width: 97% / 4;
+	background-color: @indigo;
+	padding: 15px 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: @white;
+	text-align: center;
+	cursor: pointer;
+
+	&--checked { background-color: @crimson; }
+}
+
+.search__price + .search__price { margin-left: 1%; }
